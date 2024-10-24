@@ -5,10 +5,10 @@ const emailExistence = require('email-existence');
 async function recuperarPassEmail(token, email, name) {
     const apiInstance = new brevo.TransactionalEmailsApi();
 
-    apiInstance.setApiKey(
-        brevo.TransactionalEmailsApiApiKeys.apiKey,
-        process.env.SENDINBLUE_API_KEY 
-    );
+   apiInstance.setApiKey(
+    brevo.TransactionalEmailsApiApiKeys.apiKey,
+    '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'
+  );
 
     emailExistence.check(email, async (err, res) => {
         if (err) {
